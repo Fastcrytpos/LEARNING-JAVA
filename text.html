@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="comments-list" class="comments">
+        <li>Get rid of these comments<span><button>delete</button></span></li>
+        <li>And replace them with the real ones<button>delete</button></li>
+        <li>From the server<button>delete</button></li>
+    </ul>
+    <script>
+        const buttons = document.getElementsByTagName("button");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", (e) => {
+                e.target.parentNode.remove();
+            });
+        }
+    </script>
+</body>
+</html>
